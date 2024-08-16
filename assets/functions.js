@@ -100,6 +100,12 @@ function getMeetingDate(lang) {
 			} else {
 				result_day = "<i><b><u><mark>TONIGHT</mark></u>, Friday, " + en_months[today.getMonth()] + " " + second_friday + ", " + today.getFullYear() + ".</b></i>";
 			}
+		} else if (t_day_n === second_friday - 1) {
+			if (lang === 1) {
+				result_day = "<i><b><u><mark>завтра</mark></u>, пятница, " + second_friday + " " + ru_months[today.getMonth()] + " " + today.getFullYear() + " года" + ".</b></i>";
+			} else {
+				result_day = "<i><b><u><mark>tomorrow</mark></u>, Friday, " + en_months[today.getMonth()] + " " + second_friday + ", " + today.getFullYear() + ".</b></i>";
+			}
 		} else {
 			if (lang === 1) {
 				result_day = "<i><b>пятница, " + second_friday + " " + ru_months[today.getMonth()] + " " + today.getFullYear() + " года" + ".</b></i>";
@@ -113,6 +119,12 @@ function getMeetingDate(lang) {
 				result_day = "<i><b><u><mark>СЕГОДНЯ</mark></u>, суббота, " + last_saturday + " " + ru_months[today.getMonth()] + " " + today.getFullYear() + " года" + ".</b></i>";
 			} else {
 				result_day = "<i><b><u><mark>TONIGHT</mark></u>, Saturday, " + en_months[today.getMonth()] + " " + last_saturday + ", " + today.getFullYear() + ".</b></i>";
+			}
+		} else if (t_day_n === last_saturday - 1) {
+			if (lang === 1) {
+				result_day = "<i><b><u><mark>завтра</mark></u>, суббота, " + last_saturday + " " + ru_months[today.getMonth()] + " " + today.getFullYear() + " года" + ".</b></i>";
+			} else {
+				result_day = "<i><b><u><mark>tomorrow</mark></u>, Saturday, " + en_months[today.getMonth()] + " " + last_saturday + ", " + today.getFullYear() + ".</b></i>";
 			}
 		} else {
 			if (lang === 1) {
